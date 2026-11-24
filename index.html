@@ -41,12 +41,12 @@
   .nav-links a.resume-link{color:var(--teal-dark);background:var(--teal-light)}
   @media (prefers-color-scheme: dark){.nav-links a.resume-link{color:var(--teal)}}
   /* Hero */
-  .hero{padding:64px 0 8px}
+  .hero{padding:78px 0 10px;max-width:960px}
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:600;display:flex;align-items:center;gap:10px}
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--teal);flex:0 0 28px}
-  h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;letter-spacing:-.03em;margin:18px 0 18px;font-weight:900;max-width:860px}
+  h1{font-size:clamp(38px,6.2vw,72px);line-height:1.04;letter-spacing:-.045em;margin:18px 0 20px;font-weight:900;max-width:790px}
   h1 em{font-style:normal;color:var(--teal)}
-  .lede{font-size:clamp(17px,2.1vw,20px);line-height:1.6;color:var(--muted);max-width:720px;margin:0}
+  .lede{font-size:clamp(17px,2.1vw,20px);line-height:1.6;color:var(--muted);max-width:690px;margin:0}
   .lede strong{color:var(--ink)}
   .hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;align-items:center}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit}
@@ -77,6 +77,35 @@
   .prose{max-width:760px}
   .prose p{color:var(--muted);font-size:16.5px;margin:0 0 16px}
   .prose p strong{color:var(--ink)}
+  /* Case study + capability layout */
+  .featured-intro{font-size:17px;line-height:1.7;max-width:740px}
+  .project-bridge{margin:28px 0 8px;border:1px solid var(--line);background:var(--surface);border-radius:18px;overflow:hidden}
+  .bridge-label{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--teal)}
+  .bridge-track{display:grid;grid-template-columns:repeat(3,1fr)}
+  .bridge-track>div{padding:22px 24px;border-right:1px solid var(--line)}
+  .bridge-track>div:last-child{border-right:0}
+  .bridge-step{font:600 11px "IBM Plex Mono",monospace;color:var(--teal);display:block;margin-bottom:7px}
+  .bridge-track strong{font-size:17px}
+  .bridge-track p{color:var(--muted);font-size:14px;line-height:1.5;margin:6px 0 0}
+  .system-map{margin:24px 0 8px;border-radius:18px;background:var(--surface-2);padding:24px}
+  .system-map-head{display:flex;gap:24px;justify-content:space-between;align-items:end;margin-bottom:18px}
+  .system-map-head h3{font-size:22px;letter-spacing:-.02em;margin:6px 0 0}
+  .system-map-head>p{max-width:420px;margin:0;color:var(--muted);font-size:14px}
+  .system-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .system-groups>div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .group-number{font:600 11px "IBM Plex Mono",monospace;color:var(--teal)}
+  .system-groups h4{margin:5px 0;font-size:16px}
+  .system-groups p{color:var(--muted);font-size:14px;margin:0}
+  .capability-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+  .capability{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+  .capability .cap-no{font:600 11px "IBM Plex Mono",monospace;color:var(--teal);letter-spacing:.1em}
+  .capability h3{font-size:19px;margin:8px 0}
+  .capability p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+  .capability small{display:block;color:var(--ink);font-size:13px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .guide{margin-top:42px;padding:24px 26px;border-radius:18px}
+  .guide-steps a{border:1px solid transparent;transition:transform .18s ease,border-color .18s ease}
+  .guide-steps a:hover{transform:translateY(-2px);border-color:var(--teal)}
+  @media(max-width:820px){.bridge-track,.system-groups,.capability-grid{grid-template-columns:1fr}.bridge-track>div{border-right:0;border-bottom:1px solid var(--line)}.bridge-track>div:last-child{border-bottom:0}.system-map-head{display:block}.system-map-head>p{margin-top:10px}}
   /* Featured */
   .featured{background:var(--dark);color:#eaf4ef;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
   .featured-in{padding:32px}
@@ -186,7 +215,7 @@
   <div class="hero">
     <div class="eyebrow">Portfolio · Cleveland, Ohio</div>
     <h1>I make complicated work <em>work better.</em></h1>
-    <p class="lede">Operations, IT support, process improvement, and systems design. I've built workflows from scratch, coordinated mail-order program operations, supported teams through everyday tech problems, and designed software around real operational needs. My work sits where <strong>people, processes, and technology</strong> meet.</p>
+    <p class="lede">I untangle operational problems, build practical systems, and keep technology useful. My work spans nonprofit operations, IT support, workflow design, website care, and software built around the people doing the work.</p>
     <div class="hero-proof" aria-label="Areas of work"><span>Operations &amp; process</span><span>IT support</span><span>Systems design</span><span>Nonprofit experience</span></div>
     <div class="hero-cta">
       <a class="btn btn-primary" href="assets/aj-messer-resume.pdf" download>↓ My Resume (PDF)</a>
@@ -254,8 +283,8 @@
       <div class="sec-top"><span class="sec-num">02</span><h2 class="sec-title">Harm reduction is home turf</h2></div>
     </div>
     <div class="prose">
-      <p>My program experience is in harm reduction, and it shapes how I think about tech. Small harm reduction nonprofits run on small staffs and smaller budgets. There's no IT department. When the website breaks or the tech acts up, the same people packing supply orders end up trying to fix it — if anyone does.</p>
-      <p>Straight up: <strong>I've never run a bad-batch alert system.</strong> But alert systems and mail-order supply programs are the kind of work I'm built for. I coordinated a mail-order syringe service program — requests in, supplies packed and shipped, records kept straight — and I designed a Community Alerts module inside Harmonize Hub for getting time-sensitive warnings out to the people who need them. I know this work because I've done it, and I can look after the website and systems behind it.</p>
+      <p>My program experience is in harm reduction, and it informs how I approach technology. Small nonprofits often work with lean staffing and limited budgets, without a dedicated IT person. When a website breaks or a workflow falls apart, the people already doing frontline work are left carrying the technical problem, too.</p>
+      <p>I coordinated a mail-order syringe service program: requests came in, supplies were packed and shipped, and records had to stay organized. That experience helped me recognize the practical needs behind Harmonize Hub's order, inventory, and record workflows. The Community Alerts module is a design effort toward fast, organized communication. I have not operated a bad-batch alert system, and I don't claim that experience. My experience is in the program operations that surround this work, and in designing technology to support it.</p>
     </div>
   </section>
 
@@ -286,11 +315,11 @@
     <div class="sec-head">
       <div class="sec-top"><span class="sec-num">04</span><h2 class="sec-title">Skills</h2></div>
     </div>
-    <div class="skills">
-      <article class="skill-card"><span class="tick">01</span><div><h3>Operations &amp; workflow</h3><p>Process mapping · SOPs · Intake workflows · Program logistics · Documentation · Records organization</p><small>Built processes from scratch and coordinated mail-order program operations.</small></div></article>
-      <article class="skill-card"><span class="tick">02</span><div><h3>IT support &amp; troubleshooting</h3><p>Hardware and software troubleshooting · User support · Windows · Linux · Basic networking</p><small>Google IT Support Certificate, July 2025.</small></div></article>
-      <article class="skill-card"><span class="tick">03</span><div><h3>Websites &amp; systems</h3><p>WordPress · Website maintenance · Access management · System setup · Desktop application development</p><small>Hands-on site work and ongoing Harmonize Hub development.</small></div></article>
-      <article class="skill-card"><span class="tick">04</span><div><h3>Quality &amp; documentation</h3><p>Testing · Issue identification · Process consistency · Data handling · Clear documentation</p><small>Finding where a process breaks, documenting it, and working toward a fix.</small></div></article>
+    <div class="capability-grid">
+      <article class="capability"><span class="cap-no">CAPABILITY 01</span><h3>Operations &amp; workflow design</h3><p>Process mapping, SOPs, intake workflows, program logistics, documentation, and records organization.</p><small>Built processes from scratch and coordinated mail-order program operations.</small></article>
+      <article class="capability"><span class="cap-no">CAPABILITY 02</span><h3>IT support &amp; troubleshooting</h3><p>Hardware/software troubleshooting, user support, Windows, Linux, and basic networking.</p><small>Google IT Support Certificate · July 2025</small></article>
+      <article class="capability"><span class="cap-no">CAPABILITY 03</span><h3>Web &amp; application systems</h3><p>WordPress, website maintenance, access management, system setup, and desktop application development.</p><small>Website work and continued Harmonize Hub development.</small></article>
+      <article class="capability"><span class="cap-no">CAPABILITY 04</span><h3>QA, documentation &amp; follow-through</h3><p>Testing, issue identification, process consistency, careful data handling, and clear documentation.</p><small>Spot the failure point, make it understandable, and move toward a practical fix.</small></article>
     </div>
   </section>
 
