@@ -120,6 +120,22 @@
   .week h3{margin:0 0 10px;color:#fff;font-size:19px;letter-spacing:-.01em}
   @media (prefers-color-scheme: dark){.week h3{color:var(--ink)}}
   .week p{margin:0;font-size:15.5px;line-height:1.65}
+  .featured-intro{font-size:17px;line-height:1.7;max-width:800px;color:#d6e6de;margin:0}
+  .project-bridge,.system-map{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .bridge-label{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+  .bridge-track{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+  .bridge-track>div{padding:16px;background:var(--surface-2);border-radius:10px;border-top:2px solid var(--teal)}
+  .bridge-step{display:block;font:600 11px "IBM Plex Mono",monospace;color:var(--teal);margin-bottom:8px}
+  .bridge-track strong{display:block;font-size:15px}
+  .bridge-track p{font-size:13.5px;color:var(--muted);line-height:1.5;margin:5px 0 0}
+  .system-map-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+  .system-map-head h3{margin:5px 0 0;font-size:22px;letter-spacing:-.02em}
+  .system-map-head>p{margin:0;color:var(--muted);font-size:14px;max-width:460px}
+  .system-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+  .system-groups>div{padding:16px;border:1px solid var(--line);border-radius:10px}
+  .group-number{font:600 11px "IBM Plex Mono",monospace;color:var(--teal)}
+  .system-groups h4{margin:4px 0;font-size:15px}
+  .system-groups p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5}
   /* Skills */
   .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
   .skill-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start}
@@ -149,6 +165,7 @@
     .nav-in{flex-direction:column;align-items:flex-start;gap:6px}
     .nav-links{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;max-width:100%;padding-bottom:6px}
     .featured-in,.contact{padding:24px}
+    .bridge-track,.system-groups{grid-template-columns:1fr}
     .hero{padding-top:44px}
     section{padding-top:48px}
   }
@@ -179,9 +196,9 @@
       <h2>New here? Here's the 30-second tour.</h2>
       <p>The page goes in order — scroll, or tap a step to jump straight there:</p>
       <div class="guide-steps">
-        <a href="#work"><span class="n">Step 1 · The build</span><b>See Harmonize Hub</b><span>The platform I built. Tap through its 12 modules at your own pace — there's a Next button.</span></a>
-        <a href="#harm-reduction"><span class="n">Step 2 · The background</span><b>Harm reduction is home turf</b><span>Where my program experience comes from, and how it shapes the tech work.</span></a>
-        <a href="#websites"><span class="n">Step 3 · The day-to-day</span><b>Taking over a website</b><span>What week one looks like if I take over your site, and what steady care means after that.</span></a>
+        <a href="#work"><span class="n">01 · Project case study</span><b>Harmonize Hub</b><span>From a workflow idea to a desktop application, built around nonprofit operations.</span></a>
+        <a href="#harm-reduction"><span class="n">02 · Field experience</span><b>Harm reduction is home turf</b><span>The real program work behind the system design.</span></a>
+        <a href="#websites"><span class="n">03 · Practical support</span><b>Taking over a website</b><span>My approach to auditing, maintaining, and caring for a team's website.</span></a>
       </div>
     </div>
   </div>
@@ -194,14 +211,32 @@
     </div>
 
     <div class="featured"><div class="featured-in">
-      <div class="eyebrow">Nonprofit operations platform</div>
-      <h2>One home for the whole back office</h2>
+      <div class="eyebrow">Independent project · Nonprofit operations</div>
+      <h2>One connected system for the work behind the work.</h2>
+      <p class="featured-intro">Harmonize Hub is an operations platform I designed and built to bring the moving pieces of a harm-reduction program into one place. The goal: fewer disconnected tools, less duplicated work, and a clearer picture of what's happening across the program.</p>
       <div class="csr">
-        <div><h3>The situation</h3><p>Working in harm reduction, I saw there was really no infrastructure of any kind — and technology was starkly lacking. Orders arrive by form, text, and email. Inventory sits in one spreadsheet, grants in another, and half the process lives in one person's head. I wanted to design a way for the workflows to blend together and streamline everything — in a way that stays personable and authentic for participants, takes stress off staff, and pulls it all into one coherent operation.</p></div>
-        <div><h3>What I built</h3><p>Harmonize Hub pulls it all into one connected system: order forms for syringe services and naloxone, mail-order tracking, inventory, client records, community alerts, drug checking, grants, finances, volunteers, and impact reports — twelve modules, one set of data, nothing typed in twice.</p></div>
-        <div><h3>My role</h3><p>It's mine, start to finish — my design, my build. I built the tool I wished we'd had, and I built it from doing the work myself.</p></div>
+        <div><h3>The problem</h3><p>Requests arrive through different channels. Supply counts, shipping, client records, grant obligations, and reporting can live in separate spreadsheets or in people's heads. That makes routine work harder to track, hand off, and keep consistent.</p></div>
+        <div><h3>The system</h3><p>Twelve connected modules cover the program's operational flow, from request intake and mail orders to inventory, alerts, administration, and reporting. The intent is to make information useful across the workflow instead of re-entering it in each step.</p></div>
+        <div><h3>My contribution</h3><p>I designed the workflow, shaped the modules, and built the application. It began in Base44 and has since transitioned into an Electron desktop app on my PC. This is an ongoing build, not a static mockup.</p></div>
       </div>
     </div></div>
+    <div class="project-bridge">
+      <div class="bridge-label">Project evolution</div>
+      <div class="bridge-track">
+        <div><span class="bridge-step">01</span><strong>Workflow design</strong><p>Start with the operational problems and how the pieces need to connect.</p></div>
+        <div><span class="bridge-step">02</span><strong>Base44 build</strong><p>Shape the concept into a working platform and refine the modules.</p></div>
+        <div><span class="bridge-step">03</span><strong>Electron desktop</strong><p>Move the project into a desktop application, continuing development locally.</p></div>
+      </div>
+    </div>
+    <div class="system-map">
+      <div class="system-map-head"><div><span class="bridge-label">How the system is organized</span><h3>One program. Four connected work areas.</h3></div><p>These are not twelve unrelated menu items. They describe a program's workflow and its supporting operations.</p></div>
+      <div class="system-groups">
+        <div><span class="group-number">01</span><h4>Request &amp; fulfillment</h4><p>SSP Order Form · Naloxone Order Form · Mail Orders</p></div>
+        <div><span class="group-number">02</span><h4>Program intelligence</h4><p>Dashboard · Inventory · Clients · Community Alerts · Drug Checking</p></div>
+        <div><span class="group-number">03</span><h4>Organization &amp; resources</h4><p>Grants · Financials · Volunteers</p></div>
+        <div><span class="group-number">04</span><h4>Accountability</h4><p>Impact Reports</p></div>
+      </div>
+    </div>
 
     <div class="explorer-head">
       <div><h3>What's inside — module by module</h3><p>Tap any module, or just keep hitting Next. Each one says plainly what it does.</p></div>
