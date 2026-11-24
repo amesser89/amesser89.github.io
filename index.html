@@ -124,6 +124,12 @@
   .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
   .skill-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start}
   .skill-card p{margin:0;font-size:16px;font-weight:600;line-height:1.45}
+  .hero-proof{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+  .hero-proof span{border:1px solid var(--line);background:var(--surface);padding:7px 12px;border-radius:999px;font:500 12px "IBM Plex Mono",monospace;color:var(--muted)}
+  .skill-card h3{margin:0 0 7px;font-size:18px;letter-spacing:-.015em}
+  .skill-card p{margin:0;font-size:14.5px;font-weight:600;line-height:1.55;color:var(--ink)}
+  .skill-card small{display:block;margin-top:9px;color:var(--muted);font-size:13px;line-height:1.45}
+  .skill-card .tick{flex:0 0 34px;width:34px;height:34px;border-radius:9px;font:600 12px "IBM Plex Mono",monospace}
   /* Contact */
   .contact{background:var(--dark);color:#eaf4ef;border-radius:20px;padding:34px;box-shadow:var(--shadow)}
   .contact h2{color:#fff;font-size:clamp(26px,3.6vw,36px);letter-spacing:-.025em;margin:0 0 10px;line-height:1.1}
@@ -160,8 +166,9 @@
   <!-- HERO -->
   <div class="hero">
     <div class="eyebrow">Portfolio · Cleveland, Ohio</div>
-    <h1>I'm AJ Messer. I do <em>operations</em> and <em>process improvement</em> — the procedures, workflows, and systems that keep daily work running.</h1>
-    <p class="lede">My background is operations and administration across office, nonprofit, retail, and hospitality settings. I've built intake workflows and <strong>standard operating procedures</strong> from scratch, been the testing user for a document-processing system in development, coordinated <strong>mail-order program operations</strong> end to end, and managed front-office operations. I also hold a Google IT Support Certificate (July 2025), and I'm pursuing a BS in Cybersecurity. I'm available for operations, administrative, and IT support work with small nonprofits and small teams.</p>
+    <h1>I make complicated work <em>work better.</em></h1>
+    <p class="lede">Operations, IT support, process improvement, and systems design. I've built workflows from scratch, coordinated mail-order program operations, supported teams through everyday tech problems, and designed software around real operational needs. My work sits where <strong>people, processes, and technology</strong> meet.</p>
+    <div class="hero-proof" aria-label="Areas of work"><span>Operations &amp; process</span><span>IT support</span><span>Systems design</span><span>Nonprofit experience</span></div>
     <div class="hero-cta">
       <a class="btn btn-primary" href="assets/aj-messer-resume.pdf" download>↓ My Resume (PDF)</a>
       <a class="btn btn-ghost" href="mailto:ajmesser89@gmail.com">Email me</a>
@@ -243,12 +250,10 @@
       <div class="sec-top"><span class="sec-num">04</span><h2 class="sec-title">Skills</h2></div>
     </div>
     <div class="skills">
-      <div class="skill-card"><span class="tick">✓</span><p>Website management and updates (WordPress)</p></div>
-      <div class="skill-card"><span class="tick">✓</span><p>Staff tech support and troubleshooting</p></div>
-      <div class="skill-card"><span class="tick">✓</span><p>Accounts and access security</p></div>
-      <div class="skill-card"><span class="tick">✓</span><p>Records and data organization</p></div>
-      <div class="skill-card"><span class="tick">✓</span><p>Program administration and logistics</p></div>
-      <div class="skill-card"><span class="tick">✓</span><p>Linux — comfortable navigating and working in Linux systems</p></div>
+      <article class="skill-card"><span class="tick">01</span><div><h3>Operations &amp; workflow</h3><p>Process mapping · SOPs · Intake workflows · Program logistics · Documentation · Records organization</p><small>Built processes from scratch and coordinated mail-order program operations.</small></div></article>
+      <article class="skill-card"><span class="tick">02</span><div><h3>IT support &amp; troubleshooting</h3><p>Hardware and software troubleshooting · User support · Windows · Linux · Basic networking</p><small>Google IT Support Certificate, July 2025.</small></div></article>
+      <article class="skill-card"><span class="tick">03</span><div><h3>Websites &amp; systems</h3><p>WordPress · Website maintenance · Access management · System setup · Desktop application development</p><small>Hands-on site work and ongoing Harmonize Hub development.</small></div></article>
+      <article class="skill-card"><span class="tick">04</span><div><h3>Quality &amp; documentation</h3><p>Testing · Issue identification · Process consistency · Data handling · Clear documentation</p><small>Finding where a process breaks, documenting it, and working toward a fix.</small></div></article>
     </div>
   </section>
 
